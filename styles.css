@@ -1,0 +1,880 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.header.scrolled {
+  height: 55px;
+  background: black;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  z-index: 1000;
+  height: 65px;
+  transition: 0.3s ease;
+  color: white;
+}
+
+.logo img {
+  display: flex;
+  width: 120px;
+  align-items: center;
+  margin-top: 14px;
+  transition: 0.3s ease;
+}
+
+.logo img.scrolledd {
+  width: 100px;
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  transition: transform 0.5s ease-in-out;
+}
+
+nav li:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--lightGrey);
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  color: darkorchid;
+}
+
+nav a:not(:hover) {
+  opacity: 0.5;
+}
+
+.main1 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: url(assets/BARBEARIA-ARACAJU-BARBEIRO-MESTRE.png) fixed center;
+}
+
+.fundo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0.8, 0.8, 0.8, 0.9);
+  width: 100%;
+  gap: 150px;
+  height: 100%;
+}
+
+.main1 .textocarousel {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  max-width: 500px;
+  gap: 30px;
+  padding: 10px;
+}
+
+.main1 .textocarousel p {
+  font-size: 15px;
+  color: #f0f0f0;
+}
+
+.main1 .textocarousel h3 {
+  color: #f0f0f0;
+}
+
+.main1 .textocarousel img {
+  width: 100px;
+}
+
+.main1 .textocarousel a {
+  height: 1em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+  font-style: normal;
+}
+
+.main1 .textocarousel button {
+  background: transparent;
+  width: 180px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid darkorchid;
+  transition: transform 1s;
+}
+
+.main1 .textocarousel button:hover {
+  border: 2px solid white;
+  transform: scale(1.1);
+}
+
+.main1 .textocarousel button a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 450px;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  padding: 5% 0% 0% 0%;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  border: 3px white solid;
+  border-radius: 30px;
+  padding: 10px 10px 10px 10px;
+}
+
+.carousel-item img {
+  height: 390px;
+  width: 99%;
+  display: block;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.carousel-item {
+  animation: float 3s ease-in-out infinite;
+}
+
+.main2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 110vh;
+  background-color: #ebebeb;
+  gap: 80px;
+  padding: 30px;
+}
+
+.imagems {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 650px;
+}
+
+.imagems img {
+  margin: 5px;
+  max-height: 24vh;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0.5, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.imagems img:hover {
+  transform: scale(1.08);
+}
+
+.main2 .textsobreabout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  max-width: 550px;
+  padding: 10px;
+  gap: 30px;
+  border-radius: 10px;
+  margin-top: 0%;
+}
+
+.main2 .textsobreabout p {
+  color: black;
+  margin-top: -10%;
+  padding: 10px;
+}
+
+.main2 .textsobreabout button {
+  background: transparent;
+  width: 230px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-left: 5%;
+  transition: transform 1s;
+}
+
+.main2 .textsobreabout button:hover {
+  border: 2px solid darkorchid;
+  transform: scale(1.1);
+}
+
+.main2 .textsobreabout button a {
+  text-decoration: none;
+  color: black;
+}
+
+.main4 {
+  width: 100%;
+  height: 100vh;
+  background: url(/assets/BARBEARIA-ARACAJU-BARBEIRO-MESTRE.png) fixed center;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.main4 .fundo2 .perfil {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  margin-top: -3%;
+}
+
+.main4 .fundo2 .perfil .perfill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  gap: 10px;
+}
+
+.main4 .fundo2 .perfil .perfill .botaoimgperfil {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.main4 .fundo2 .perfil .perfill .botaoimgperfil:hover {
+  transform: scale(1.10);
+}
+
+.main4 .fundo2 .perfil .perfill .botaoimgperfil img {
+  width: 200px;
+  border-radius: 5%;
+}
+
+.main4 .fundo2 .perfil .perfill .botaoPerfil button {
+  background: transparent;
+  width: 230px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid darkorchid;
+  transition: transform 1s;
+}
+
+.main4 .fundo2 .perfil .perfill .botaoPerfil button a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.main4 .fundo2 .perfil .perfill .botaoPerfil button:hover {
+  border: 2px solid white;
+  transform: scale(1.1);
+}
+
+.hidden3 {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateY(30%);
+  transition: all 2s;
+}
+
+.show3 {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 2s;
+}
+
+.fundo2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0.5, 0.5, 0.5, 0.9);
+  width: 100%;
+  gap: 120px;
+  height: 100vh;
+  padding: 5%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.modal-content {
+  background-color: black;
+  margin: 5% auto;
+  padding: 20px;
+  border: 2px solid mediumorchid;
+  border-radius: 20px;
+  width: 25%;
+  height: 60vh;
+  gap: 20px;
+  color: #f0f0f0;
+  text-align: center;
+  transform: translateY(-10px);
+  transition: transform 0.1s ease, opacity 0.1s ease;
+  opacity: 0;
+}
+
+.modal.show {
+  display: block;
+  opacity: 1;
+}
+
+.modal-content.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.main5 {
+  display: flex;
+  align-items: center;
+  background: #ebebeb;
+  width: 100%;
+  gap: 30px;
+  padding: 30px;
+  height: 75vh;
+}
+
+.main5 .textolocalização {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.main5 .textolocalização img {
+  margin-left: 5%;
+}
+
+.main5 .map {
+  margin-top: 5%;
+}
+
+.main5 .map .mapa-conteudo {
+  width: 500px;
+}
+
+.main5 .textocomimg p {
+  margin-left: -1px;
+}
+
+.main5 p {
+  max-width: 700px;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+footer {
+  margin-top: auto;
+  background: black;
+  padding: 15px;
+  width: 100%;
+}
+
+footer .icon {
+  display: flex;
+  align-items: center;
+  margin-left: 47%;
+}
+
+footer .icon img {
+  width: 32px;
+}
+
+footer .icon ul {
+  display: flex;
+  list-style-type: none;
+}
+
+footer p {
+  text-align: center;
+  color: #CCC;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 600;
+  transition: 300ms;
+  color: #CCC;
+}
+
+footer a:hover {
+  opacity: 0.5;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 2s;
+  transition-delay: 600ms;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 3s;
+  transition-delay: 600ms;
+}
+
+.hidden2 {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateY(100%);
+  transition: all 5s;
+}
+
+.show2 {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 2s;
+  transition-delay: 100ms;
+}
+
+
+@media (max-width: 1100px) {
+
+  .main1 {
+    width: 100%;
+    height: 110vh;
+  }
+
+  .fundo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 110vh;
+    gap: 0%;
+    padding: 20px;
+    margin: 0%;
+  }
+
+  .textocarousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .textocarousel2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: -5%;
+    margin-top: 10%;
+  }
+
+  .carousel {
+    max-width: 350px;
+  }
+
+
+  .main2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 105vh;
+  }
+
+  .main2 .imagems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+
+  }
+
+  .main2 .imagems img {
+    width: 105px;
+    margin: 0;
+  }
+
+  .textsobreabout {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10%;
+  }
+
+  .perfil {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .main5 {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    height: 100vh;
+  }
+
+}
+
+@media (max-width: 550px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #menu-toggle {
+    display: block;
+    color: white;
+    margin-left: 20%;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    color: white;
+    width: 40%;
+    height: 20vh;
+    margin-top: 54%;
+    background: black;
+    border-radius: 0px 0px 10px 10px;
+    justify-content: center;
+
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .main1 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .fundo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100vh;
+    padding: 5%;
+
+  }
+
+  .textocarousel {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+  }
+
+  .textocarousel2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: -5%;
+    margin-top: 10%;
+  }
+
+  .carousel {
+    max-width: 380px;
+  }
+
+
+  .main2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 125vh;
+  }
+
+  .main2 .imagems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px;
+
+  }
+
+  .main2 .imagems img {
+    width: 110px;
+    margin: 0;
+  }
+
+  .textsobreabout {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10%;
+  }
+
+  .main2 .textsobreabout {
+
+    height: 30vh;
+
+  }
+
+  .main4 {
+    height: 130vh;
+  }
+
+  .main4 .fundo2 {
+    height: 130vh;
+  }
+
+  .main4 .fundo2 .perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .main5 {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    height: 100vh;
+    padding: 0px;
+  }
+
+  .modal-content {
+    width: 350px;
+  }
+
+  .modal-content h1 {
+    margin-top: 10%;
+  }
+
+  .map {
+    display: flex;
+    justify-content: center;
+    max-width: 95%;
+  }
+
+  .mapa-conteudo {
+    display: flex;
+    align-items: center;
+    max-width: 95%;
+  }
+
+  footer .icon ul {
+    display: flex;
+    align-items: center;
+    margin-left: -25px;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 385px) {
+  .header {
+    padding: 5px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #menu-toggle {
+    display: block;
+    color: white;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .main1 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .fundo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 130vh;
+    justify-content: center;
+  }
+
+  .textocarousel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 5%;
+  }
+
+  .textocarousel2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: -5%;
+    margin-top: 10%;
+  }
+
+  .carousel {
+    max-width: 350px;
+    max-height: 55vh;
+  }
+
+
+  .carousel-inner {
+
+    max-height: 50vh;
+  }
+
+
+  .carousel-item img {
+    max-height: 45vh;
+  }
+
+  .carousel-item {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .main2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 130vh;
+  }
+
+  .main2 .textsobreabout {
+    height: 30vh;
+  }
+
+  .main2 .imagems {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .main2 .imagems img {
+    width: 90px;
+    margin: 0;
+  }
+
+  .textsobreabout {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10%;
+  }
+
+  .main4 {
+    height: 155vh;
+  }
+
+  .main4 .fundo2 {
+    height: 155vh;
+  }
+
+  .main4 .fundo2 .perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .perfil {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main5 {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    height: 140vh;
+  }
+
+  .main5 .textolocalização {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+  }
+
+  .main5 .map {
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal-content {
+    width: 300px;
+  }
+}
